@@ -65,8 +65,6 @@ function sumAndMultiply(a, b, c) { //eslint-disable-line
   let prodString = `The product of ${a} and ${b} and ${c} is ${finalProd[0]}.`;
 
   result.push(finalSum[0], finalProd[0], sumString, prodString);
-  console.log(result);
-
   return result;
 
 }
