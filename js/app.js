@@ -9,7 +9,9 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
-
+  let sumValue = a + b;
+  let message = `The sum of ${a} and ${b} is ${sumValue}.`;
+  return [sumValue, message];
 }
 
 // Here is the test for sum(); uncomment it to run it
@@ -27,6 +29,9 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
+  let multiplyValue = a * b;
+  let message = `The sum of ${a} and ${b} is ${multiplyValue}.`;
+  return [multiplyValue, message];
 
 }
 
