@@ -53,7 +53,8 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-
+  let sum = sum(sum(a, b)[0], c);
+  let product = multiply(multiply(a, b)[0], c)[0];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
