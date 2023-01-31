@@ -9,7 +9,9 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
-
+  let sumValue = a + b;
+  let message = `The sum of ${a} and ${b} is ${sumValue}.`;
+  return [sumValue, message];
 }
 
 // Here is the test for sum(); uncomment it to run it
@@ -27,7 +29,9 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
-
+  let multiplyValue = a * b;
+  let message = `The sum of ${a} and ${b} is ${multiplyValue}.`;
+  return [multiplyValue, message];
 }
 
 // Here is the test for multiply(); uncomment it to run it
@@ -48,7 +52,19 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
+  let result = [];
 
+  let firstSum = sum(a, b);
+  let finalSum = sum(firstSum[0], c);
+
+  let firstProd = multiply(a, b);
+  let finalProd = multiply(firstProd[0], c);
+
+  let sumString = `${a} and ${b} and ${c} sum to ${finalSum[0]}.`;
+  let prodString = `The product of ${a} and ${b} and ${c} is ${finalProd[0]}.`;
+
+  result.push(finalSum[0], finalProd[0], sumString, prodString);
+  return result;
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -70,7 +86,15 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
+  let sum1 = sum(sumArr[0], sumArr[1]);
+  let sum2 = sum1[0];
 
+  let sum3 = sum(sum2, sumArr[2]);
+  let sum4 = sum3[0];
+
+
+  let msg = `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sum4} is their sum.`;
+  return [sum4, msg];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
